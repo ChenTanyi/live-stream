@@ -34,6 +34,7 @@ class Douyu():
 
     @staticmethod
     def background_run(command: str):
+        logging.info(command)
         thread = threading.Thread(target = os.system, args = (command,))
         thread.setDaemon(True)
         thread.start()
